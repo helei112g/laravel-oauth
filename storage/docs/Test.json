@@ -1,0 +1,108 @@
+{
+    "basePath": "http://localhost/laravel/public",
+    "swaggerVersion": "2.1",
+    "apiVersion": "1.0.0",
+    "resourcePath": "/Test",
+    "apis": [
+        {
+            "path": "/facet.{format}/{facetId}",
+            "description": "Operations about facets",
+            "operations": [
+                {
+                    "method": "DELETE",
+                    "summary": "Find facet by ID",
+                    "nickname": "getfacetById",
+                    "parameters": [
+                        {
+                            "paramType": "path",
+                            "name": "facetId",
+                            "type": "string",
+                            "required": true,
+                            "description": "ID of facet that needs to be fetched"
+                        }
+                    ],
+                    "responseMessages": [
+                        {
+                            "code": 400,
+                            "message": "Invalid ID supplied"
+                        },
+                        {
+                            "code": 404,
+                            "message": "facet not found"
+                        }
+                    ],
+                    "notes": "Returns a facet based on ID"
+                },
+                {
+                    "method": "GET",
+                    "summary": "Find facet by ID",
+                    "nickname": "getfacetById",
+                    "parameters": [
+                        {
+                            "paramType": "query",
+                            "name": "facetId",
+                            "type": "string",
+                            "required": false,
+                            "description": "ID of facet that needs to be fetched"
+                        }
+                    ],
+                    "responseMessages": [
+                        {
+                            "code": 400,
+                            "message": "Invalid ID supplied"
+                        },
+                        {
+                            "code": 404,
+                            "message": "facet not found"
+                        }
+                    ],
+                    "notes": "Returns a facet based on ID"
+                }
+            ]
+        },
+        {
+            "path": "/test",
+            "operations": [
+                {
+                    "method": "GET",
+                    "summary": "\u4e00\u4e2a\u6d4b\u8bd5\u65b9\u6cd5index",
+                    "nickname": "getUserByName",
+                    "type": "Article",
+                    "parameters": [
+                        {
+                            "paramType": "query",
+                            "name": "username",
+                            "type": "string",
+                            "required": false,
+                            "allowMultiple": false,
+                            "description": "\u59d3\u540d"
+                        },
+                        {
+                            "paramType": "query",
+                            "name": "id[1]",
+                            "type": "string",
+                            "required": true,
+                            "allowMultiple": false,
+                            "description": "id\u4e2d\u7684\u4e00\u4e2a"
+                        }
+                    ],
+                    "responseMessages": [
+                        {
+                            "code": 400,
+                            "message": "Invalid username supplied"
+                        },
+                        {
+                            "code": 404,
+                            "message": "User not found"
+                        }
+                    ],
+                    "notes": "",
+                    "authorizations": {}
+                }
+            ]
+        }
+    ],
+    "produces": [
+        "application/json"
+    ]
+}

@@ -1,0 +1,10 @@
+{
+    "apiVersion": "",
+    "swaggerVersion": "2.1",
+    "apis": [
+        {
+            "path": "/Test",
+            "description": "\u6211\u7684\u7b2c\u4e00\u4e2a\u6d4b\u8bd5\u7c7b"
+        }
+    ]
+}
