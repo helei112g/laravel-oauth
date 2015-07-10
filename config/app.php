@@ -147,7 +147,7 @@ return [
         /*
          * 第三方服务提供者 
          */
-        Riverslei\Swaggervel\SwaggervelServiceProvider::class,
+        //Riverslei\Swaggervel\SwaggervelServiceProvider::class,
         //LucaDegasperi\OAuth2Server\Storage\FluentStorageServiceProvider::class,
         //LucaDegasperi\OAuth2Server\OAuth2ServerServiceProvider::class,
         //Illuminate\Html\HtmlServiceProvider::class,
